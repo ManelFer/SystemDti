@@ -31,7 +31,9 @@
           <h1 class="text-3xl font-bold text-center mb-4 text-green-800">
             Sistema DTI
           </h1>
-          <p class="text-lg font-mono text-center mb-4 text-green-700">LOGIN</p>
+          <p class="text-lg font-mono text-center mb-4 text-green-700">
+            ---LOGIN---
+          </p>
 
           <label for="email" class="block text-sm text-gray-800 mb-1">
             E-mail
@@ -43,8 +45,8 @@
           />
         </div>
 
-        <!-- div para a senha-->
-        <div class="mb-4">
+        <!-- div para a senha que so vai aparecer se possuir um email cadastrado-->
+        <div class="mb-4 hidden">
           <label for="password" class="block text-sm text-gray-800 mb-1"
             >Senha</label
           >
@@ -55,16 +57,97 @@
           />
         </div>
         <!-- div para o botão-->
-        <div>
+        <div class="hidden">
+          <!-- botão que vai aparecer quando o botão verificar for valido-->
           <button
-            class="w-full text-sm text-white hover:text-green-700 bg-green-700 hover:bg-white"
+            class="w-full text-sm text-white bg-green-700 hover:bg-green-600 hover:scale-110 rounded-md"
             id="login-button"
           >
             Login
           </button>
         </div>
+        <!-- fim botão Login-->
+
+        <!-- Inicio botão verificar -->
+        <div>
+          <button
+            class="w-full text-sm text-white bg-green-700 hover:bg-green-600 hover:scale-110 rounded-md"
+            id="verificar-button"
+          >
+            Verificar
+          </button>
+        </div>
+        <!-- Fim Inicio botão verificar -->
       </div>
     </div>
+
+    <!-- modal cart-->
+    <div
+      class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+      id="cart-modal"
+    >
+      <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <img
+          src="assets/bg.png"
+          alt="logoDefensoria"
+          class="w-40 hover:scale-110 duration-200 rounded-full mx-auto"
+        />
+        <h2 class="text-center font-bold text-2xl mb-2">Cadastrar</h2>
+        <!-- div para o cadastro -->
+        <div class="mb-4">
+          <label for="User" class="mb-2"> Seu Nome: </label>
+          <input
+            type="text"
+            id="user"
+            class="w-full bg-gray-50 border border-gray-500 text-black-300 placeholder-black-300 focus:outline-none"
+          />
+        </div>
+
+        <!-- div para senha e confirmar senha-->
+        <div class="mb-4">
+          <!--senha-->
+          <div class="mb-4">
+            <label for="password" class="mb-2"> Sua Senha: </label>
+            <input
+              type="password"
+              id="password"
+              class="w-full bg-gray-50 border border-gray-500 text-black-300 placeholder-black-300 focus:outline-none"
+            />
+          </div>
+          <!-- Repetir a senha-->
+          <div class="mb-4">
+            <label for="password" class="mb-2"> Repetir senha </label>
+            <input
+              type="password"
+              id="password"
+              class="w-full bg-gray-50 border border-gray-500 text-black-300 placeholder-black-300 focus:outline-none"
+            />
+          </div>
+          <!-- fim repetir senha-->
+
+          <!-- Inicio do botão -->
+          <div class="flex items-center justify-between mt-5 w-full">
+            <button
+              id="closer-modal-btn"
+              class="hover:text-green-700 hover:scale-110"
+            >
+              voltar
+            </button>
+            <button
+              id="checkout-btn"
+              class="bg-green-700 hover:bg-green-600 text-white px-4 py-1 rounded hover:scale-110"
+            >
+              Login
+            </button>
+          </div>
+          <!-- Fim Inicio do botão -->
+        </div>
+        <!-- fim div para senha e confirmar senha-->
+
+        <!-- fim div para o cadastro -->
+      </div>
+    </div>
+    <!-- fim modal cart-->
     <!-- Fim do container -->
     <script src="script.js"></script>
   </body>

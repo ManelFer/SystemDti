@@ -1,0 +1,6 @@
+Possue um lugar para por o email.
+Assim que colocar o email e clicar no botão verificar ele vai buscar no sistema se possue um email caastrado
+    Se "sim" abir uma segunda label para a senha. Se "não" abiri uma tela para adicionar o usuario e uma senha
+
+
+----- Instale o expresso.js ------
