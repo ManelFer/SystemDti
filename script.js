@@ -16,6 +16,9 @@ function validateForm() {
   // Aqui você pode adicionar mais validações, como verificar se o e-mail é válido, etc.
   if (email === "manoelferreiramatos.ti@gmail.com" || password === "1234") {
     alert("Bem vindo" + email);
+  }else if(email != "manoelferreiramatos.ti@gmail.com" || password != "1234" ){
+    alert("Senha ou e-mail não cadastrado!");
+    return false
   }
 
   return true;
