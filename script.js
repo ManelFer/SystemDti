@@ -1,3 +1,4 @@
+const verificarButton = document.getElementById("verificar-button");
 const loginButton = document.getElementById("login-button");
 const cartModal = document.getElementById("cart-modal");
 const closerModalBtn = document.getElementById("closer-modal-btn");
