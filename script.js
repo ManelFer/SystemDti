@@ -17,27 +17,8 @@ closerModalBtn.addEventListener("click", function () {
 
 // verificar email
 verificarButton.addEventListener("click", function () {
-  const emailValue = email.value;
-
-  fetch("http://127.0.0.1:5500/verificar-button", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email: emailValue }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.exists) {
-        // Email existe no banco de dados
-        console.log("Email existe!");
-        // Aqui você pode mostrar a div com a senha
-        const senhaDiv = document.querySelector(".mb-4.hidden");
-        senhaDiv.classList.remove("hidden");
-      } else {
-        // Email não existe no banco de dados
-        console.log("Email não existe!");
-      }
-    })
-    .catch((error) => console.error(error));
+  if (email.value === " ") {
+    alert("Por favor, coloque seu email para verificação");
+  } else {
+  }
 });
